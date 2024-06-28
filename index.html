@@ -10,7 +10,7 @@
     <title>Crie seu currículo</title>
 </head>
 <body>
-    <div class="container">
+    <div id="dados" class="page active"> 
         <section class="header">
             <h2>Dados pessoais</h2>
         </section>
@@ -25,10 +25,10 @@
             </div>
 
             <div class="form-content">
-                <label for="datanasc">Data de nascimento</label>
+                <label for="data">Data de nascimento</label>
                 <input 
-                type="text"
-                id="datanasc"
+                type="date"
+                id="data"
                 placeholder="Digite sua data de nascimento"/>
                 <a>Aqui vai a mensagem de erro</a>
             </div>
@@ -51,12 +51,23 @@
                 <a>Aqui vai a mensagem de erro</a>
             </div>
 
-            <button type="submit">Continuar</button>
-
+            <div class="form-content">
+                <label for="cep">Endereço</label>
+                <input 
+                type="text"
+                id="cep"
+                placeholder="Digite a cidade e o estado onde mora"/>
+                <a>Aqui vai a mensagem de erro</a>
+            </div>
+            
+            <div class="button-row">
+                <button class="button" onclick="nextPage('formacao')">Próximo</button>
+              </div>
         
         </form>
         
     </div>
+    
     <script src="./script.js"></script>
 </body>
 </html>
