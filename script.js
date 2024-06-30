@@ -1,6 +1,6 @@
 const form = document.getElementById("form");
 const username = document.getElementById("username")
-const data = document.getElementById("data")
+const data = document.getElementById("idade")
 const email = document.getElementById("email")
 const telefone = document.getElementById("telefone")
 const cep = document.getElementById("cep")
@@ -16,7 +16,7 @@ username.addEventListener("blur", () => {
 })   
 
 data.addEventListener("blur", () => {
-    checkInputData();
+    checkInputIdade();
 })  
 
 email.addEventListener("blur", () => {
@@ -42,13 +42,13 @@ function checkInputUsername(){
     }
 }
 
-function checkInputData(){
-    const dataValue = data.value;
+function checkInputIdade(){
+    const idadeValue = idade.value;
 
-    if (dataValue === "") {
-        errorInput(data, "Campo obrigatório")
+    if (idadeValue === "") {
+        errorInput(idade, "Campo obrigatório")
     }else{ 
-        const formItem = data.parentElement;
+        const formItem = idade.parentElement;
         formItem.className = "form-content"
     }
 }
@@ -91,7 +91,7 @@ function checkForm(){
     checkInputEmail();
     checkInputTelefone();
     checkInputCep();
-    checkInputData();
+    checkInputIdade();
 
     const formItems = form.querySelectorAll(".form-content")
     const isValid = [...formItems].every ( (item) => {

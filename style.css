@@ -2,13 +2,13 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: "Poppins";, sans-serif;
+    font-family: "Poppins"; sans-serif;
 
 }
 
 body {
     background: #36393c;
-    width: 100;
+    width: 100%;
     min-height: 100vh;
     display: flex;
     justify-content: center;
@@ -16,6 +16,7 @@ body {
 }
 
 .page.active {
+    display: block;
     background-color: rgb(255, 255, 255);
     border-radius: 1px;
     margin: 14px;
@@ -25,12 +26,22 @@ body {
 
 }
 
+
 .header {
     background: #29a8a8;
     border-radius: 1px;
     padding: 24px;
     text-align: center;
     color: #ffffff;
+
+}
+
+.sub {
+    background: #ffffff
+    border-radius: 8px;
+    padding: 10px;
+    text-align: center;
+    color: #36393c
 
 }
 
@@ -48,6 +59,12 @@ body {
 .form-content label {
     display: inline-block;
     margin-bottom: 4px;
+
+}
+
+.form-content select {
+    display: inline-block;
+    width: 100%;
 
 }
 
@@ -87,4 +104,17 @@ body {
     color: #c94d4d;
     font-size: 12px;
     visibility: visible;
+}
+
+.buttonDownload {
+    background-color: #29a8a8;
+    color: #ffffff;
+    width: 100%;
+    border-radius: 14px;
+    padding: 10px;
+    border: 0;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 14px;
+    align-items: center;
 }

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,60 +11,80 @@
 </head>
 <body>
     <div id="dados" class="page active"> 
-        <section class="header">
-            <h2>Dados pessoais</h2>
-        </section>
-        <form id="form" class="form">
+        <section class="header"><h2>Crie seu currículo</h2></section>
+        <form id="form" class="form" action="resume.php" method="post">
             <div class="form-content">
+                <section class="sub"><h4>Dados pessoais</h4></section>
                 <label for="username">Nome</label>
-                <input 
-                type="text"
-                id="username"
-                placeholder="Digite seu nome completo"/>
+                <input type="text" name="username" id="username" placeholder="Digite seu nome completo"/>
                 <a>Aqui vai a mensagem de erro</a>
             </div>
 
             <div class="form-content">
-                <label for="data">Data de nascimento</label>
-                <input 
-                type="date"
-                id="data"
-                placeholder="Digite sua data de nascimento"/>
+                <label for="idade">Data de nascimento</label>
+                <input type="date" name="idade" id="idade"placeholder="Digite sua data de nascimento"/>
                 <a>Aqui vai a mensagem de erro</a>
             </div>
 
             <div class="form-content">
                 <label for="email">Email</label>
-                <input 
-                type="Email"
-                id="email"
-                placeholder="Digite seu email"/>
+                <input type="email" name="email" id="email" placeholder="Digite seu email"/>
                 <a>Aqui vai a mensagem de erro</a>
             </div>
 
             <div class="form-content">
                 <label for="telefone">Telefone</label>
-                <input 
-                type="number"
-                id="telefone"
-                placeholder="Digite seu número de telefone"/>
+                <input type="number" name="telefone" id="telefone" placeholder="Digite seu número de telefone"/>
                 <a>Aqui vai a mensagem de erro</a>
             </div>
 
             <div class="form-content">
                 <label for="cep">Endereço</label>
-                <input 
-                type="text"
-                id="cep"
-                placeholder="Digite a cidade e o estado onde mora"/>
+                <input type="text" name="cep" id="cep" placeholder="Digite a cidade e o estado onde mora"/>
                 <a>Aqui vai a mensagem de erro</a>
             </div>
             
-            <div class="button-row">
-                <button class="button" onclick="nextPage('formacao')">Próximo</button>
-              </div>
-        
+            <section class="sub"><h4>Formação</h4></section>
+            <div class="form-content">
+                <label for="Escolaridade">Escolaridade:</label><br>
+                <select id="escolaridade" name="escolaridade">
+                <option value="Educação básica">Educação básica</option>
+                <option value="Ensino Médio">Ensino Médio</option>
+                <option value="Ensino Superior Incompleto">Ensino Superior Incompleto</option>
+                <option value="Ensino Superior Completo">Ensino Superior Completo</option>
+                <option value="Pós-Graduação">Pós-Graduação</option>
+                </select><br><br>
+            </div>
+
+            <div class="form-content">
+                <label for="curso">Curso</label>
+                <input type="text" name="curso" id="curso" placeholder="Digite o curso"/>
+            </div>
+
+            <div class="form-content">
+                <label for="instituicao">Instituicão</label>
+                <input type="text" name="instituicao" id="instituicao" placeholder="Digite a instituição"/>
+            </div>
+
+            <section class="sub"><h4>Experiência profissional</h4></section>
+            <div class="form-content">
+                <label for="empresa">Empresa</label>
+                <input type="text" name="empresa" id="empresa" placeholder="Digite a empresa em que trabalhou"/>
+            </div>
+
+            <div class="form-content">
+                <label for="cargo">Cargo</label>
+                <input type="text" id="cargo" placeholder="Digite o cargo que exercia"/>
+            </div>
+                    
+            <div class="form-content">
+                <label for="periodo">Período</label>
+                <input type="text" name="periodo" id="periodo" placeholder="Digite o periodo que trabalhou nessa empresa"/>
+            </div>
+            
+            <button type="submit">Gerar currículo</button>
         </form>
+
         
     </div>
     
